@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Battleship</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="title">
+      <h1>Battleship</h1>
+      <p class="subtitle">
+        Place your ships (3, 4, 5). Press <kbd>R</kbd> to rotate.
+      </p>
+    </div>
+
+    <div class="controls">
+      <button id="btnRestart" class="btn secondary" type="button" title="Keep ship placements, reset shots/turn">
+        Restart Game
+      </button>
+      <button id="btnNew" class="btn" type="button" title="Reset everything and place ships again">
+        New Game
+      </button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Your Board</h2>
+        <div class="mini">
+          <span class="pill" id="phasePill">Loading…</span>
+          <span class="pill" id="rotatePill">Rotation: Horizontal</span>
+        </div>
+      </div>
+
+      <div id="playerGrid" class="grid" aria-label="Player Grid"></div>
+
+      <div class="legend">
+        <div><span class="swatch water"></span> Water</div>
+        <div><span class="swatch ship"></span> Ship</div>
+        <div><span class="swatch hit"></span> Hit</div>
+        <div><span class="swatch miss"></span> Miss</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Enemy Board</h2>
+        <div class="mini">
+          <span class="pill" id="turnPill">Turn: —</span>
+          <span class="pill" id="shipsLeftPill">Ships: —</span>
+        </div>
+      </div>
+
+      <div id="cpuGrid" class="grid" aria-label="Computer Grid"></div>
+
+      <div class="status">
+        <div class="status-title">Status</div>
+        <div id="statusText" class="status-text">Loading…</div>
+      </div>
+
+      <div class="howto">
+        <div class="howto-title">How to play</div>
+        <ul>
+          <li>Place your ships on <b>Your Board</b> with click.</li>
+          <li>Hover shows a translucent preview (valid/invalid).</li>
+          <li>Press <kbd>R</kbd> to rotate while placing.</li>
+          <li>After placement, click squares on <b>Enemy Board</b> to fire.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Local persistence: your game auto-saves to your browser.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
