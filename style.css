@@ -31,10 +31,8 @@ body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   color:var(--text);
 
-  /* Fixed gradient so it doesn't "reset" while scrolling */
   background: linear-gradient(180deg, var(--bg1), var(--bg2));
   background-attachment: fixed;
-
   min-height:100vh;
 }
 
@@ -48,21 +46,10 @@ body{
   margin:0 auto;
 }
 
-.title h1{
-  margin:0;
-  font-size:28px;
-  letter-spacing:.5px;
-}
-.subtitle{
-  margin:6px 0 0 0;
-  color:var(--muted);
-}
+.title h1{ margin:0; font-size:28px; letter-spacing:.5px; }
+.subtitle{ margin:6px 0 0 0; color:var(--muted); }
 
-.controls{
-  display:flex;
-  gap:10px;
-  padding-top:6px;
-}
+.controls{ display:flex; gap:10px; padding-top:6px; }
 
 .btn{
   border:none;
@@ -77,10 +64,7 @@ body{
 }
 .btn:hover{ transform: translateY(-1px); }
 .btn:active{ transform: translateY(0px); opacity:.9; }
-
-.btn.secondary{
-  background: rgba(234,246,255,.75);
-}
+.btn.secondary{ background: rgba(234,246,255,.75); }
 
 .layout{
   max-width:1100px;
@@ -106,10 +90,7 @@ body{
   gap:10px;
   margin-bottom:10px;
 }
-.panel-header h2{
-  margin:0;
-  font-size:18px;
-}
+.panel-header h2{ margin:0; font-size:18px; }
 
 .mini{
   display:flex;
@@ -148,25 +129,12 @@ body{
   transition: background-color .08s ease;
 }
 
-.cell.disabled{
-  cursor:not-allowed;
-  opacity:.95;
-}
+.cell.disabled{ cursor:not-allowed; opacity:.95; }
+.cell.ship{ background: rgba(87,208,255,.35); }
+.cell.preview-ok{ background: rgba(126,240,255,.35); }
+.cell.preview-bad{ background: rgba(255,107,107,.35); }
+.cell.hit{ background: rgba(255,59,59,.85); }
 
-.cell.ship{
-  background: rgba(87,208,255,.35);
-}
-
-.cell.preview-ok{
-  background: rgba(126,240,255,.35);
-}
-.cell.preview-bad{
-  background: rgba(255,107,107,.35);
-}
-
-.cell.hit{
-  background: rgba(255,59,59,.85);
-}
 .cell.miss{
   background: rgba(255,255,255,.92);
 }
@@ -189,6 +157,7 @@ body{
   color:var(--muted);
   font-size:13px;
 }
+
 .swatch{
   display:inline-block;
   width:14px;
@@ -217,16 +186,9 @@ body{
   color: var(--muted);
   margin-bottom:6px;
 }
-.status-text{
-  font-size:14px;
-  line-height:1.35;
-}
-.howto ul{
-  margin:0;
-  padding-left:18px;
-  color: var(--muted);
-  font-size:13px;
-}
+.status-text{ font-size:14px; line-height:1.35; }
+.howto ul{ margin:0; padding-left:18px; color: var(--muted); font-size:13px; }
+
 kbd{
   padding:2px 6px;
   border-radius:6px;
